@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>عبدالله سيد | مهندس نمو استراتيجي</title>
+  <!-- Google Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: linear-gradient(145deg, #ffffff 0%, #faf5ff 100%);
+      color: #111827;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #a855f7;
+      border-radius: 10px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      border-radius: 2rem;
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.03), 0 4px 8px rgba(0, 0, 0, 0.02);
+      transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    }
+    .glass-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(168, 85, 247, 0.4);
+      box-shadow: 0 25px 35px -12px rgba(128, 0, 255, 0.15);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(105deg, #8b5cf6 0%, #c084fc 100%);
+      color: white;
+      font-weight: 600;
+      padding: 0.9rem 2rem;
+      border-radius: 3rem;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 18px -6px rgba(139, 92, 246, 0.3);
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      transform: scale(1.03);
+      background: linear-gradient(105deg, #7c3aed 0%, #a855f7 100%);
+      box-shadow: 0 15px 25px -10px rgba(139, 92, 246, 0.5);
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: transparent;
+      border: 1.5px solid #8b5cf6;
+      color: #6d28d9;
+      font-weight: 600;
+      padding: 0.8rem 1.8rem;
+      border-radius: 3rem;
+      transition: 0.2s;
+      text-decoration: none;
+      backdrop-filter: blur(4px);
+    }
+    .btn-outline:hover {
+      background: rgba(139, 92, 246, 0.1);
+      border-color: #a855f7;
+      transform: translateY(-2px);
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: 2.2rem;
+      background: linear-gradient(135deg, #4c1d95, #a855f7);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .section-subhead {
+      font-size: 1.2rem;
+      color: #4b5563;
+      max-width: 700px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-gradient-text {
+      background: linear-gradient(125deg, #6d28d9, #c241ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .service-card {
+      padding: 1.8rem;
+      border-radius: 1.8rem;
+      background: rgba(255,255,255,0.65);
+      backdrop-filter: blur(8px);
+      transition: all 0.25s;
+      height: 100%;
+    }
+    .service-card i {
+      font-size: 2.2rem;
+      background: linear-gradient(125deg, #8b5cf6, #c084fc);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .step-item {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 1.5rem;
+      padding: 1.2rem;
+      border-right: 4px solid #a855f7;
+      text-align: right;
+    }
+
+    .case-card {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 1.8rem;
+      padding: 1.6rem;
+      height: 100%;
+      transition: all 0.2s;
+    }
+    .case-card:hover {
+      background: rgba(255,255,255,0.85);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      border-top: 1px solid rgba(139, 92, 246, 0.2);
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(4px);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1.5rem;
+      }
+      h2 {
+        font-size: 1.9rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(18px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    .animate-fade {
+      animation: fadeUp 0.6s ease forwards;
+    }
+    section {
+      margin: 5rem 0;
+    }
+    /* RTL adjustments for icons and flex */
+    .btn-primary i, .btn-outline i {
+      margin-left: 0.3rem;
+      margin-right: 0;
+    }
+    .step-item i {
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header بسيط وجذاب -->
+  <div style="padding: 1.2rem 0; backdrop-filter: blur(8px); background: rgba(255,255,255,0.5); position: sticky; top:0; z-index: 40; border-bottom: 1px solid rgba(139,92,246,0.15);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <span style="font-weight: 800; font-size: 1.5rem; background: linear-gradient(135deg,#4c1d95,#a855f7); background-clip:text; -webkit-background-clip:text; color:transparent;">Abdallah Sayed</span>
+      <div style="display: flex; gap: 1rem;">
+        <a href="#contact" class="btn-outline" style="padding:0.5rem 1.2rem; font-size:0.9rem;"><i class="fas fa-comment"></i> تواصل معي</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section style="margin-top: 2rem; margin-bottom: 4rem;">
+      <div class="container hero">
+        <div class="glass-card" style="padding: 3rem 2rem; text-align: center; background: rgba(255,255,255,0.65);">
+          <h1 style="font-size: 2.8rem; line-height: 1.3; max-width: 900px; margin: 0 auto 1rem;">أنا مش مجرد مقدم خدمات — <span class="hero-gradient-text">أنا ببني استراتيجيات تهزم منافسيك</span></h1>
+          <p style="font-size: 1.25rem; color: #2d3a4a; max-width: 720px; margin: 1rem auto 2rem;">بساعد العلامات التجارية تنمو بشكل أسرع من خلال تصميم ذكي، محتوى قوي، وأنظمة تسويق مبنية على البيانات.</p>
+          <a href="#contact" class="btn-primary"><i class="fas fa-bolt"></i> اشتغل معايا</a>
+          <div style="margin-top: 2rem; display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;">
+            <span style="display: flex; align-items: center; gap: 6px; background: rgba(139,92,246,0.1); padding: 0.4rem 1rem; border-radius: 40px;"><i class="fas fa-chart-line" style="color:#8b5cf6"></i> قرارات مدعومة بالبيانات</span>
+            <span style="display: flex; align-items: center; gap: 6px; background: rgba(139,92,246,0.1); padding: 0.4rem 1rem; border-radius: 40px;"><i class="fas fa-brain" style="color:#8b5cf6"></i> عقلية استراتيجية</span>
+            <span style="display: flex; align-items: center; gap: 6px; background: rgba(139,92,246,0.1); padding: 0.4rem 1rem; border-radius: 40px;"><i class="fas fa-chart-simple"></i> تركيز على العائد الحقيقي</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me (مصري مكسر) -->
+    <section>
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center;">
+          <div class="glass-card" style="padding: 2rem;">
+            <i class="fas fa-quote-left" style="font-size: 2rem; color: #c084fc; opacity: 0.5; margin-bottom: 0.5rem;"></i>
+            <h2 style="margin-top: 0;">عن Abdallah</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;"><strong>أنا Abdallah Sayed — مش شغال "فريلانسر" عادي، أنا Digital Services Specialist 
+                .</strong> مش ببدأ أي شغل قبل ما أحلل السوق كويس. نقطة قوتي: فهم نفسية الجمهور، تشريح المنافسين، وبناء خطط محكمة تخلي العميل دايمًا متقدم.</p>
+            <p>كل حملة بتبدأ بفرضية. بدرس إيه اللي منافسيك ناقصهم، باكتشف المحفزات السلوكية، وبصمم أنظمة بتخلق ميزة تنافسية حقيقية. تركيزي على <strong>النتيجة، مش على الشغل نفسه</strong>.</p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <span><i class="fas fa-check-circle" style="color:#a855f7"></i> سيكولوجية الجمهور</span>
+              <span><i class="fas fa-check-circle" style="color:#a855f7"></i> تشريح المنافسين</span>
+              <span><i class="fas fa-check-circle" style="color:#a855f7"></i> خارطة طريق استراتيجية</span>
+            </div>
+          </div>
+          <div class="glass-card" style="padding: 2rem; text-align: center;">
+            <i class="fas fa-chart-line" style="font-size: 3rem; background: linear-gradient(135deg,#8b5cf6,#c084fc); background-clip:text; -webkit-background-clip:text; color:transparent;"></i>
+            <h3 style="margin: 1rem 0 0.5rem;">منهجيتي بالأرقام</h3>
+            <p style="font-size: 0.9rem;">نمو منظم > بوستات عشوائية<br>استراتيجية معمقة > حلول سطحية<br>هزيمة المنافسين > اتباع الترندات</p>
+            <div style="background: rgba(139,92,246,0.1); border-radius: 1.5rem; padding: 1rem; margin-top: 1rem;">
+              <span style="font-weight: 800;">⚡ 87% </span> من الاستراتيجيات اللي بطبّقها بتتجاوز الـ KPIs المستهدفة
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Philosophy (مهم جدًا) -->
+    <section>
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <h2>فلسفتي الأساسية</h2>
+          <p class="section-subhead" style="margin: 0 auto;">الركائز اللي بتبني عليها كل مشروع بشتغله</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem;">
+          <div class="glass-card" style="padding: 1.8rem; text-align: center;">
+            <i class="fas fa-chart-line" style="font-size: 2.4rem; color:#a855f7"></i>
+            <h3 style="margin: 1rem 0 0.5rem;">تنفيذ من غير استراتيجية = مجهود ضايع</h3>
+            <p style="color: #2c3e50;">كل خطوة لازم تكون مخطط ليها. من غير خريطة، احنا بنتوه.</p>
+          </div>
+          <div class="glass-card" style="padding: 1.8rem; text-align: center;">
+            <i class="fas fa-palette" style="font-size: 2.4rem; color:#a855f7"></i>
+            <h3 style="margin: 1rem 0 0.5rem;">التصميم الحلو مش للجمال، للنتيجة</h3>
+            <p style="color: #2c3e50;">أي تصميم مش بيحقق تحويلات هو مجرد ديكور. أنا باصمم عشان أحفز العميل يتخذ إجراء.</p>
+          </div>
+          <div class="glass-card" style="padding: 1.8rem; text-align: center;">
+            <i class="fas fa-bullhorn" style="font-size: 2.4rem; color:#a855f7"></i>
+            <h3 style="margin: 1rem 0 0.5rem;">محتوى من غير استهداف = ضوضاء</h3>
+            <p style="color: #2c3e50;">الوصول من غير دقة ملهوش لازمة. الدقة أهم من الكم.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES (نتائج مش مهام) -->
+    <section>
+      <div class="container">
+        <div style="text-align: center;">
+          <h2>الخدمات — نتائج حقيقية مش مجرد مهام</h2>
+          <p class="section-subhead">كل خدمة معمولة عشان تحقق تأثير مباشر على أرباحك</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.8rem;">
+          <div class="service-card">
+            <i class="fas fa-pen-fancy"></i>
+            <h3>تصميم جرافيك</h3>
+            <p><strong>تصميمات بتجذب الانتباه وتحوّل المشاهدين لعملاء.</strong> هوية بصرية، إعلانات، مواد تسويقية بتركيز على التحويل.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-video"></i>
+            <h3>مونتاج الفيديو</h3>
+            <p><strong>مونتاج يضمن أعلى نسبة مشاهدة وتفاعل.</strong> قصص بصرية جذابة، هوك افتتاحي، مونتاج احترافي للسوشيال ميديا ويوتيوب.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-chart-simple"></i>
+            <h3>شراء إعلانات (Media Buying)</h3>
+            <p><strong>استراتيجيات إعلانات مبنية على البيانات بتركز على عائد الاستثمار، مش مجرد صرف ميزانية.</strong> تقسيم جمهور، اختبار إبداعات، توسع ناجح.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-users"></i>
+            <h3>إدارة منصات التواصل</h3>
+            <p><strong>أنظمة نمو متكاملة مش مجرد بوستات عشوائية.</strong> محاور محتوى، بناء مجتمع، استراتيجيات تفاعل، وتفوق على المنافسين.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW I THINK (طريقة تفكيري) -->
+    <section>
+      <div class="container">
+        <div style="text-align: center;">
+          <h2>طريقة تفكيري</h2>
+          <p class="section-subhead">الإطار الاستراتيجي اللي بطبقه من البيانات لحد التفوق في السوق</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem;">
+          <div class="step-item"><i class="fas fa-chart-line" style="color:#8b5cf6"></i> <strong>١. تحليل السوق</strong><br>تحديد الفجوات والفرص الحقيقية</div>
+          <div class="step-item"><i class="fas fa-chess-board" style="color:#8b5cf6"></i> <strong>٢. تشريح المنافسين</strong><br>نقاط ضعفهم وقوتهم بالتفصيل</div>
+          <div class="step-item"><i class="fas fa-user-group" style="color:#8b5cf6"></i> <strong>٣. دراسة سلوك الجمهور</strong><br>دوافع شراء وتحليل نفسي</div>
+          <div class="step-item"><i class="fas fa-drafting-compass" style="color:#8b5cf6"></i> <strong>٤. بناء استراتيجية مخصصة</strong><br>خطة نمو مصممة خصيصًا للمشروع</div>
+          <div class="step-item"><i class="fas fa-chart-line" style="color:#8b5cf6"></i> <strong>٥. تحسين مستمر</strong><br>اختبار، قياس، تطوير، توسيع</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES (دراسات حالة احترافية) -->
+    <section>
+      <div class="container">
+        <div style="text-align: center;">
+          <h2>محاكاة استراتيجية</h2>
+          <p class="section-subhead">كيف سأحقق نموًا خارقًا — سيناريوهات واقعية بناءً على منهجيتي</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+          
+          <!-- Case 1 -->
+          <div class="case-card">
+            <i class="fas fa-chart-simple" style="font-size: 2rem; color:#a855f7;"></i>
+            <h3 style="margin: 0.5rem 0;">من 0 إلى 100 ألف متابع</h3>
+            <p><strong>المشكلة:</strong> علامة تجارية جديدة بدون وجود على السوشيال ميديا، ومجتمع صفر، ومصداقية ضعيفة.</p>
+            <p><strong>الاستراتيجية:</strong> تحليل فجوات المنافسين + نظام محتوى فيروسي + تضخيم عبر المؤثرين الصغار + حلقة تفاعل.</p>
+            <p><strong>خطة التنفيذ:</strong> ١) تدقيق لأكبر 10 منافسين، ٢) تطوير 3 محاور محتوى عالية المشاركة، ٣) نشر يومي + استوريهات تفاعلية، ٤) تعاون استراتيجي مع صناع محتوى متوسطين، ٥) مجموعات تفاعل ومحتوى من الجمهور.</p>
+            <p><strong>النتائج المتوقعة:</strong> 100 ألف متابع عضوي خلال 7 شهور، نسبة تفاعل فوق 7%، خفض تكلفة الاكتساب العضوي بنسبة 40%.</p>
+          </div>
+          
+          <!-- Case 2 -->
+          <div class="case-card">
+            <i class="fas fa-chart-line" style="font-size: 2rem; color:#a855f7;"></i>
+            <h3 style="margin: 0.5rem 0;">رفع عائد الإعلانات من 2x لـ 6x في 90 يوم</h3>
+            <p><strong>المشكلة:</strong> متجر إلكتروني عائد إعلاناته على ميتا راكد عند 2.1x، إبداعات متعبة وجمهور مستهلك.</p>
+            <p><strong>الاستراتيجية:</strong> إطار اختبار إبداعات، طبقات جماهيرية، تحسين صفحات الهبوط، وإعادة استهداف ذكية.</p>
+            <p><strong>خطة التنفيذ:</strong> أسبوع 1-2: اختبار 5 زوايا إعلانية، اختيار أفضل 3. أسبوع 3-5: إطلاق جماهير شبيهة من المشترين، تنفيذ ريتارجتينج ديناميكي. أسبوع 6-12: توسع في الحملات الناجحة مع تجديد الإبداعات أسبوعيًا.</p>
+            <p><strong>النتائج المتوقعة:</strong> ارتفاع العائد إلى 5.8x، انخفاض تكلفة الاكتساب 32%، زيادة متوسط قيمة الطلب 3 أضعاف عبر العروض.</p>
+          </div>
+          
+          <!-- Case 3 -->
+          <div class="case-card">
+            <i class="fas fa-film" style="font-size: 2rem; color:#a855f7;"></i>
+            <h3 style="margin: 0.5rem 0;">إنعاش قناة يوتيوب: من 500 لـ 50 ألف مشاهدة شهريًا</h3>
+            <p><strong>المشكلة:</strong> قناة عندها 3 آلاف مشترك، نسبة احتفاظ 28%، ونشر غير منتظم.</p>
+            <p><strong>الاستراتيجية:</strong> مونتاج معتمد على الاحتفاظ، اختبار A/B للصور المصغرة، عناوين بحثية، ملء الفجوات المحتوى مقارنة بالمنافسين.</p>
+            <p><strong>خطة التنفيذ:</strong> ١) تحليل أنجح فيديوهات المنافسين، ٢) إعادة هيكلة السكريبت بهوك قوي، ٣) اختبار صور وعناوين، ٤) نشر أسبوعي، ٥) شاشات نهاية وبطاقات لزيادة مدة المشاهدة.</p>
+            <p><strong>النتائج المتوقعة:</strong> زيادة 340% في المشاهدات، متوسط احتفاظ 52%، 2000 مشترك جديد شهريًا، فرص ربح و رعايات.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE ME (ليه تختارني) -->
+    <section>
+      <div class="container">
+        <div class="glass-card" style="padding: 2.5rem;">
+          <div style="text-align: center;">
+            <h2>ليه تختارني</h2>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.8rem; margin-top: 1.5rem;">
+            <div style="display: flex; gap: 1rem; align-items: center;"><i class="fas fa-chart-line fa-2x" style="color:#a855f7;"></i> <span><strong>مش بحزر — انا ببني قرارات</strong><br>قرارات مبنية على بيانات، مش على أحاسيس</span></div>
+            <div style="display: flex; gap: 1rem; align-items: center;"><i class="fas fa-diagram-project fa-2x" style="color:#a855f7;"></i> <span><strong>مش بنشر — انا ببني أنظمة</strong><br>هياكل قابلة للتوسع، مش حلول مؤقتة</span></div>
+            <div style="display: flex; gap: 1rem; align-items: center;"><i class="fas fa-eye fa-2x" style="color:#a855f7;"></i> <span><strong>مش بقلد الترندات —انا بدرس وبكسّر منافسيني</strong><br>بعكس هندسة نجاحهم وأتفوق عليهم</span></div>
+            <div style="display: flex; gap: 1rem; align-items: center;"><i class="fas fa-trophy fa-2x" style="color:#a855f7;"></i> <span><strong>بشتغل على النتيجة مش المجهود</strong><br>مسؤولية كاملة قدام نمو أعمالك</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION (عربي إنجليزي mix) -->
+    <section id="contact">
+      <div class="container">
+        <div class="glass-card" style="padding: 2.5rem; text-align: center; background: linear-gradient(125deg, rgba(255,255,255,0.85), rgba(237, 226, 255, 0.8));">
+          <h2 style="font-size: 2.4rem;">جاهز تسبق منافسينك؟</h2>
+          <p style="font-size: 1.4rem; font-weight: 500; margin: 0.5rem 0 1rem;">Let’s build something that actually gets results.</p>
+          <div style="display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+            <a href="https://wa.me/201080493859?text=السلام%20عليكم%20عبدالله%20عايز%20نشتغل%20مع%20بعض" class="btn-primary" style="background: #25D366; box-shadow: none;"><i class="fab fa-whatsapp"></i> واتساب</a>
+            <a href="https://web.facebook.com/AbdallahSayed09?locale=ar_AR" class="btn-primary" style="background: #6c5ce7;"><i class="fa-brands fa-facebook"></i></i> فيسبوك</a>
+          </div>
+          <p style="margin-top: 1.2rem; font-size: 0.85rem; opacity: 0.7;">⚡ برد خلال 24 ساعة | شراكة مبنية على الاستراتيجية</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="margin-top: 3rem; padding: 2rem 0;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <span style="font-weight: 700; font-size: 1.2rem;">عبدالله سيد</span>
+          <p style="font-size: 0.8rem; color: #5b21b6;">Digital Services</p>
+        </div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="https://web.facebook.com/AbdallahSayed09?locale=ar_AR" style="color: #6d28d9; text-decoration: none;"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://wa.me/201080493859?text=السلام%20عليكم%20عبدالله%20عايز%20نشتغل%20مع%20بعض" style="color: #6d28d9; text-decoration: none;"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/in/abdallah-sayed-7149663b7/" style="color: #6d28d9; text-decoration: none;"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div style="font-size: 0.75rem; color: #4b5563;">© 2025 • الاستراتيجية بتتغلب على الحظ</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if(targetId === "#") return;
+        const target = document.querySelector(targetId);
+        if(target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    // fade-in animation on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.glass-card, .service-card, .case-card, .step-item').forEach((el, idx) => {
+        el.style.opacity = '0';
+        el.style.animation = 'fadeUp 0.5s ease forwards';
+        el.style.animationDelay = `${idx * 0.05}s`;
+      });
+    });
+  </script>
+</body>
+</html>
